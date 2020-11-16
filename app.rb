@@ -6,6 +6,7 @@ class CounterApp < Sinatra::Base
 
   before do
     @counter = Counter.instance
+    p @counter
   end
 
   get '/' do
@@ -16,4 +17,10 @@ class CounterApp < Sinatra::Base
     @counter.increment
     redirect '/'
   end
+
+  post '/decrement' do
+    @counter.decrement
+    redirect '/'
+  end
+  
 end
