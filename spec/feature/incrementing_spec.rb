@@ -21,4 +21,15 @@ feature "decreases the count" do
     expect(page).to have_button('Decrement')
     expect(page).to have_content -1
   end
-end 
+end
+
+# feature "it displays the time" do
+#   scenario 'time from last dec / inc is displayed' do
+#     visit("/")
+#     expect(page).to have_content 0
+#     click_button "Decrement"
+#     expect(page).to have_button('Decrement')
+#     expect(page).to have_content -1
+#     expect(page).to have_content Time.now.strftime("%H:%M:%S")
+#   end
+# end

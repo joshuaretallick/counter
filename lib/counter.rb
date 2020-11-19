@@ -19,4 +19,10 @@ class Counter
   def self.instance
     @counter ||= Counter.new
   end
+
+  def time
+    newtime = DatabaseConnection.query("SELECT * FROM counter WHERE id=1;")
+    newtime[0]['lastmodified'].to_s
+  end
+
 end
